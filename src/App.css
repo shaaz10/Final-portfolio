@@ -1,0 +1,57 @@
+/* Custom styles for shimmer effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Remove default outlines from interactive elements */
+a:focus, button:focus, input:focus, textarea:focus, [role="button"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(190, 149, 255, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(190, 149, 255, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(190, 149, 255, 0.8);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove max-width constraint from root */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure full-width layout */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

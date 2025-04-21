@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode color vars */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 271 91% 65%; /* Vibrant purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 184 100% 46%; /* Cyan */
+    --secondary-foreground: 240 5.9% 10%;
+
+    --tertiary: 323 100% 48%;
+    --tertiary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 95%;
+    --muted-foreground: 240 4.8% 38.8%;
+
+    --accent: 184 100% 46%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 271 91% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 3.9%;
+    --sidebar-primary: 271 91% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 11%;
+    --sidebar-ring: 271 91% 65%;
+
+    /* Custom animation properties */
+    --cursor-size: 40px;
+    --cursor-color: rgba(20, 20, 40, 0.12);
+  }
+
+  .dark {
+    /* Dark mode variables override */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 5.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 271 91% 65%; /* Vibrant purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 184 100% 46%; /* Cyan */
+    --secondary-foreground: 240 5.9% 10%;
+
+    --tertiary: 323 100% 48%; /* Magenta */
+    --tertiary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 75%;
+
+    --accent: 184 100% 46%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 15%;
+    --input: 240 5% 11%;
+    --ring: 271 91% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 10% 4.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 271 91% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 11%;
+    --sidebar-ring: 271 91% 65%;
+
+    --cursor-size: 40px;
+    --cursor-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Cursor styles */
+.custom-cursor {
+  position: fixed;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  transform: translate(-50%, -50%);
+}
+
+/* Hide cursor on interactive elements */
+a, button, input, textarea, [role="button"], [tabindex]:not([tabindex="-1"]) {
+  cursor: none;
+}
+
+/* Custom animated text overflow */
+.animate-text-container {
+  overflow: hidden;
+  display: block;
+}
+
+.animate-text {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.visible .animate-text {
+  animation: text-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--index) * 0.05s);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  /* Hide default cursor when custom cursor is active */
+  html, body {
+    cursor: none;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
