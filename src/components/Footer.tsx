@@ -106,7 +106,7 @@ export function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/40 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} AnimationAlchemist. All rights reserved.
+            &copy; {new Date().getFullYear()}Shaaz Hussain. All rights reserved.
           </p>
           
           <div className="text-white/40 text-sm">
