@@ -6,21 +6,21 @@ import { AnimatedText } from "./AnimatedText";
 const PROJECTS = [
   {
     title: "Complaints Webstie for VNRVJIET college",
-    description: "A WebGL-based audio visualizer that creates stunning 3D representations of music in real-time.",
+    description: "A complainting website for students annoymously",
     image: "/1.png",
     tags: ["WebG3", "MERN", "NODE js", "FLASK"],
     link: "https://complaints.vnrzone.site/"
   },
   {
     title: "Project Expo Website for VNRVJIET college",
-    description: "Interactive visualization of neural networks allowing users to understand AI concepts through animation.",
+    description: "A websitefor the students to display their projectrs or view others project and comment on them",
     image: "/2.png",
     tags: ["React", "TypeScript", "AI", "Lucid react"],
     link: "https://openhouse.vnrzone.site/"
   },
   {
     title: "Mood changing Webstie for depressed people",
-    description: "A framework for creating fluid, responsive typography animations that react to user interaction.",
+    description: "used for changing the mood this website ask you about your mood and suggest you the type of  movies ,quotes,music etc  u should watch or listen to ,to change your mood",
     image: "/3.png",
     tags: ["JavaScript", "Canvas API", "Typography", "Motion Design"],
     link: "https://moodmavens.netlify.app/"
