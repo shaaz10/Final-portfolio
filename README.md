@@ -34,11 +34,7 @@ git clone https://github.com/your-username/your-portfolio.git
 
 There are several ways of editing your application.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/93656b92-1204-4267-8522-83055cf8e239) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
