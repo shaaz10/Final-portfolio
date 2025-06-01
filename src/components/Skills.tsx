@@ -115,7 +115,7 @@ export function Skills() {
               <h4 className="text-lg font-medium mb-4 text-white/80">Tools & Technologies</h4>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Falsk", "Azure", "ML", "AIs", "Github", 
+                  "Flask", "Azure", "ML", "AIs", "Github", 
                   "MERN", "ML libs", "React", "TypeScript", "TailwindCSS",
                   "WEKA", "UML", "JAVA", "Python", "JSP","Servlets"
                 ].map((tool, index) => (
